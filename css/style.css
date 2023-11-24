@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --yellow: #FCDD26;
+    --white: #fff;
+    --gray:#333;
+}
+
+*{
+ font-family: 'Poppins', sans-serif;
+ padding: 0; margin: 0;
+ border: none; outline: none;
+ text-transform: capitalize;
+ text-decoration: none;
+ transition: all .2s linear;
+ box-sizing: border-box;
+}
+
+section {
+    padding: 2rem 5%;
+}
+
+*::selection{
+    background: var(--yellow);
+    color: var(--gray);
+}
+
+html::-webkit-scrollbar{
+    width: 1.2rem;
+}
+html::-webkit-scrollbar-track{
+    background: var(--gray);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+    border-radius: .5rem;
+}
+.btn{
+    background: var(--yellow);
+    color: var(--gray);
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display:inline-block;
+}
+
+.btn:hover{
+    background: var(--gray);
+    color: var(--yellow);
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+    color: var(--gray);
+}
+
+.heading i{
+    color: var(--yellow);
+    font-size: 2.2rem;
+}
+
+
+/* ...............header......... */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem 5%;
+    background: var(--white);
+}
+header #menu-bar{
+    display: none;
+}
+header .logo{
+    color: var(--gray);
+    font-size: 1.8rem;
+}
+header .logo i{
+    font-size: 2rem;
+    color: var(--yellow);
+    transform: rotate(-65deg);
+}
+header .logo i:hover{
+    color: var(--gray);
+}
+header .navbar a{
+    color: var(--gray);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+header .navbar a:hover{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+header .icons i{
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-right: .5rem;
+    cursor: pointer;
+}
+header .icons i:hover{
+    color: var(--yellow);
+}
+header .search-bar{
+    position: absolute;
+    top: 100%; left: 0; width: 100%;
+    background: var(--yellow);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+}
+header .search-bar.active{
+    transform: scaleY(1);
+}
+header .search-bar input{
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--gray);
+    text-transform: none;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+header .search-bar input::placeholder{
+    text-transform: capitalize;
+}
+header .search-bar label{
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+/* ...........HOME............ */
+.home{
+    height: 80vh;
+    background: url(../images/home-bg.webp) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.home .content span{
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+.home .content h1{
+    font-size: 4rem;
+    color: var(--gray);
+}
+
+.home .content .btn{
+    background: var(--white);
+}
+
+.home .content .btn:hover{
+    background: var(--gray);
+}
+
+/* ....category.... */
+
+.category .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category .inner .box{
+    width: 24%;
+    text-align: center;
+}
+
+.category .inner .box img{
+    width: 100%;
+}
+
+.category .inner .box h3{
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-bottom: .5rem;
+}
+
+
+/* .......featured..... */
+
+.featured .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.featured .inner .box{
+    width: 49%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.featured .inner .box:hover{
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+}
+
+
+.featured .inner .box .price{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: var(--yellow);
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+.featured .inner .box .content .icons i{
+    color: var(--yellow);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.featured .inner .box .content h3{
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-bottom: .5rem;
+}
+
+.featured .inner .box .content p{
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+/* ......deal....... */
+
+.deal{
+    height: 80vh;
+    background: url(../images/deal-bg.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deal .content{
+    text-align: center;
+}
+
+
+.deal .content span{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: .5rem;
+}
+
+.deal .content h2{
+    font-size: 3rem;
+    color: var(--gray);
+    margin-bottom: .5rem;
+}
+
+
+
+/* .....product..... */
+
+.product .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product .inner .box{
+    width: 24%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.product .inner .box:hover{
+    box-shadow:  0 0 1rem rgba(0, 0, 0, .7);
+}
+
+.product .inner .box img{
+    width: 49%;
+}
+
+.product .inner .box .content{
+    width: 49%;
+}
+
+.product .inner .box .content .stars i{
+    color: var(--yellow);
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.product .inner .box .content h3{
+    color: var(--gray);
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+.product .inner .box .content .price{
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: .5rem;
+}
+
+.product .inner .box .content .price span{
+    font-size: 1rem;
+    color: #666;
+    text-decoration: line-through;
+}
+
+
+/* .....offer... */
+
+.offer .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.offer .inner .box{
+    width: 49%;
+    position: relative;
+}
+
+.offer .inner .box img{
+    width: 100%;
+}
+
+.offer .inner .box .content{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.offer .inner .box .content p{
+    font-size: 1.5rem;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.offer .inner .box .content h4{
+    font-size: 2.2rem;
+    color: var(--gray);
+    margin: .5rem 0;
+}
+
+.offer .inner .box .content .btn{
+    background-color: var(--white);
+}
+
+.offer .inner .box .content .btn:hover{
+    background: var(--gray);
+}
+
+/* ......contact..... */
+
+.contact{
+    background: url(../images/contact-bg.webp) no-repeat center;
+    background-size: cover;
+    height: 85vh;
+    padding: .5rem;
+}
+
+
+.contact  .heading{
+    margin-top: 3rem;
+}
+
+.contact .heading i{
+    color: var(--white);
+}
+
+.contact form{
+    text-align: center;   
+}
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.contact form .inputBox input{
+    width: 45%;
+    margin: .5rem;
+    padding: .7rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+    text-transform: none;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.contact form .inputBox input::placeholder{
+    text-transform: lowercase;
+}
+
+.contact form textarea{
+    resize: none;
+    width: 91%;
+    margin: .5rem;
+    border-radius: .7rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+    padding: .5rem;
+    height: 20rem;
+}
+
+.contact form .btn{
+    background: var(--white);
+}
+
+.contact form .btn:hover{
+    background: var(--gray);
+}
+
+/* ......footer...... */
+
+
+footer .social{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+footer .social a{
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin: .2rem .5rem;
+    padding: .5rem;
+}
+
+footer .author{
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--gray);
+}
+
+footer .author span{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+
+
+@media(max-width: 1350px){
+    .product .inner .box{
+        width: 23%;
+        padding: .5rem;
+    }
+}
+
+@media(max-width: 1250px){
+    .featured .inner .box img{
+        width: 48%;
+    }
+    .featured .inner .box .price{
+        top: .5rem; right: .5rem;
+    }
+}
+
+@media(max-width: 1050px){
+    header .navbar a{
+        font-size: 1.3rem;
+    }
+
+    .featured .inner .box .price{
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 1rem;
+    }
+
+    .product .inner .box{
+        width: 45%;
+    }
+
+    .offer .inner .box .content p{
+        font-size: 1.1rem;
+    }
+
+    .offer .inner .box .content h4{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 980px){
+
+    header #menu-bar{
+        display: initial;
+        font-size: 1.5rem;
+        padding: .5rem;
+        cursor: pointer;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--yellow);
+        transform: scaleY(0);
+    }
+
+    header .navbar.active{
+        transform: scaleY(1);
+    }
+
+    header .navbar a{
+        display: block;
+        background: var(--white);
+        margin: .5rem;
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    .category .inner .box{
+        width: 45%;
+    }
+
+    .featured .inner .box{
+        width: 100%;
+    }
+    .featured .inner .box .price{
+        width: 6rem;
+        height: 6rem;
+        line-height: 6rem;
+        font-size: 1.4rem;
+    }
+
+}
+
+
+@media(max-width: 750px){
+    .category .inner .box,
+    .product .inner .box,
+    .featured .inner .box,
+    .offer .inner .box{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
